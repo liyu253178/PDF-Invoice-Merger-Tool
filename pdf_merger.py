@@ -61,8 +61,10 @@ class PDFMerger(QMainWindow):
         button_layout = QHBoxLayout()
         add_button = QPushButton('添加文件')
         remove_button = QPushButton('移除文件')
+        remove_all_button = QPushButton('移除全部文件')
         button_layout.addWidget(add_button)
         button_layout.addWidget(remove_button)
+        button_layout.addWidget(remove_all_button)
         left_layout.addLayout(button_layout)
 
         # 中间布局（设置选项）
@@ -81,7 +83,7 @@ class PDFMerger(QMainWindow):
         self.cols = QSpinBox()
         self.rows.setMinimum(1)
         self.cols.setMinimum(1)
-        self.rows.setValue(2)
+        self.rows.setValue(3)
         self.cols.setValue(2)
         layout_options.addWidget(QLabel('行数：'))
         layout_options.addWidget(self.rows)
@@ -122,6 +124,7 @@ class PDFMerger(QMainWindow):
         # 连接信号和槽
         add_button.clicked.connect(self.add_files)
         remove_button.clicked.connect(self.remove_files)
+        remove_all_button.clicked.connect(self.remove_all_files)
         merge_button.clicked.connect(self.merge_files)
         self.orientation.currentIndexChanged.connect(self.update_preview)
         self.rows.valueChanged.connect(self.update_preview)
@@ -150,13 +153,19 @@ class PDFMerger(QMainWindow):
         self.update_preview()
         self.update_progress_bar()
 
+    def remove_all_files(self):
+        self.files.clear()
+        self.file_list.clear()
+        self.update_preview()
+        self.update_progress_bar()
+
     def update_progress_bar(self):
         total_files = len(self.files)
         if total_files == 0:
             self.progress_bar.setValue(0)
             self.progress_bar.setFormat("等待添加文件")
         else:
-            self.progress_bar.setValue(0)
+            self.progress_bar.setValue(100)
             self.progress_bar.setFormat(f"已选择 {total_files} 个文件")
 
     def convert_image_to_pdf(self, image_path):
@@ -221,7 +230,12 @@ class PDFMerger(QMainWindow):
 
             # 处理所有文件
             processed_files = []
-            for file in self.files:
+            total_files = len(self.files)
+            self.progress_bar.setValue(0)
+            self.progress_bar.setFormat("正在生成预览...")
+            QApplication.processEvents()
+
+            for i, file in enumerate(self.files):
                 try:
                     if file.lower().endswith('.pdf'):
                         temp_pdf = self.process_pdf_page(file)
@@ -229,6 +243,13 @@ class PDFMerger(QMainWindow):
                         temp_pdf = self.convert_image_to_pdf(file)
                     temp_pdfs.append(temp_pdf)
                     processed_files.append(temp_pdf)
+                    
+                    # 更新进度条
+                    progress_value = int(((i + 1) / total_files) * 50) # 前50%用于文件处理
+                    self.progress_bar.setValue(progress_value)
+                    self.progress_bar.setFormat(f'正在处理文件: %p% - {i + 1}/{total_files} 文件')
+                    QApplication.processEvents()
+
                 except Exception as e:
                     error_msg = f'处理文件时出错：{str(e)}'
                     self.log_error(error_msg)
@@ -236,6 +257,8 @@ class PDFMerger(QMainWindow):
                     continue
 
             if not processed_files:
+                self.progress_bar.setValue(0)
+                self.progress_bar.setFormat("预览生成失败")
                 return
 
             # 创建预览PDF
@@ -253,6 +276,12 @@ class PDFMerger(QMainWindow):
             for i, file_path in enumerate(processed_files):
                 if i >= rows * cols:
                     break
+                
+                # 更新进度条
+                progress_value = int(50 + ((i + 1) / (rows * cols)) * 50) # 后50%用于渲染
+                self.progress_bar.setValue(progress_value)
+                self.progress_bar.setFormat(f'正在渲染预览: %p% - {i + 1}/{rows * cols} 页面')
+                QApplication.processEvents()
 
                 try:
                     row = i // cols
@@ -331,6 +360,9 @@ class PDFMerger(QMainWindow):
             self.log_error(error_msg, exc_info=True)
             QMessageBox.warning(self, '警告', error_msg)
             self.preview_label.clear()
+            self.progress_bar.setValue(0)
+            self.progress_bar.setFormat("预览生成失败")
+            QApplication.processEvents()
 
         finally:
             # 清理临时文件
@@ -343,6 +375,9 @@ class PDFMerger(QMainWindow):
                 os.unlink(temp_preview.name)
             except:
                 pass
+            self.progress_bar.setValue(100)
+            self.progress_bar.setFormat("预览完成")
+            QApplication.processEvents()
 
     def merge_files(self):
         if not self.files:
@@ -365,7 +400,12 @@ class PDFMerger(QMainWindow):
             processed_files = []
 
             # 处理所有输入文件
-            for file in self.files:
+            total_files_to_process = len(self.files)
+            self.progress_bar.setValue(0)
+            self.progress_bar.setFormat("正在处理文件...")
+            QApplication.processEvents()
+
+            for i, file in enumerate(self.files):
                 try:
                     if file.lower().endswith('.pdf'):
                         temp_pdf = self.process_pdf_page(file)
@@ -373,6 +413,13 @@ class PDFMerger(QMainWindow):
                         temp_pdf = self.convert_image_to_pdf(file)
                     temp_pdfs.append(temp_pdf)
                     processed_files.append(temp_pdf)
+                    
+                    # 更新进度条
+                    progress_value = int(((i + 1) / total_files_to_process) * 50) # 前50%用于文件处理
+                    self.progress_bar.setValue(progress_value)
+                    self.progress_bar.setFormat(f'正在处理文件: %p% - {i + 1}/{total_files_to_process} 文件')
+                    QApplication.processEvents()
+
                 except Exception as e:
                     error_msg = f'处理文件时出错：{str(e)}'
                     self.log_error(error_msg)
@@ -381,6 +428,8 @@ class PDFMerger(QMainWindow):
 
             if not processed_files:
                 QMessageBox.warning(self, '警告', '没有可处理的文件！')
+                self.progress_bar.setValue(0)
+                self.progress_bar.setFormat("合并失败")
                 return
 
             # 设置页面大小和方向
@@ -451,9 +500,9 @@ class PDFMerger(QMainWindow):
 
                         # 更新进度条
                         current_file_index = i + j
-                        progress_value = int(((current_file_index + 1) / len(processed_files)) * 100)
+                        progress_value = int(50 + ((current_file_index + 1) / len(processed_files)) * 50) # 后50%用于合并
                         self.progress_bar.setValue(progress_value)
-                        self.progress_bar.setFormat(f'合并进度: %p% - {current_file_index + 1}/{len(processed_files)} 文件')
+                        self.progress_bar.setFormat(f'正在合并: %p% - {current_file_index + 1}/{len(processed_files)} 文件')
                         QApplication.processEvents() # 允许UI更新
 
                             
@@ -489,11 +538,17 @@ class PDFMerger(QMainWindow):
                 output_writer.write(output)
 
             QMessageBox.information(self, '成功', '文件合并完成！')
+            self.progress_bar.setValue(100)
+            self.progress_bar.setFormat("合并完成")
+            QApplication.processEvents() # 允许UI更新
 
         except Exception as e:
-            error_msg = f'合并过程中出现错误：{str(e)}'
+            error_msg = f'文件合并失败：{str(e)}'
             self.log_error(error_msg, exc_info=True)
             QMessageBox.critical(self, '错误', error_msg)
+            self.progress_bar.setValue(0)
+            self.progress_bar.setFormat("合并失败")
+            QApplication.processEvents()
 
         finally:
             # 清理临时文件
