@@ -1,0 +1,444 @@
+2025-06-13 11:56:05 - ERROR - 预览文件时出错（tmpqalni308.pdf）：
+fileName=<_io.BufferedReader name='C:\\Users\\zheyu\\AppData\\Local\\Temp\\tmpqalni308.pdf'> identity=[ImageReader@0x14d7afc24e0] cannot identify image file <_io.BytesIO object at 0x0000014D7AFD4360>
+Traceback (most recent call last):
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 649, in __init__
+    self._image = self._read_image(self.fp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 666, in _read_image
+    return Image.open(fp)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\PIL\Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000014D7AFD4360>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 261, in update_preview
+    c.drawImage(file_path, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2084, in __init__
+    self.loadImageFromA85(src)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2092, in loadImageFromA85
+    imagedata = pdfutils.makeA85Image(source,IMG=IMG,detectJpeg=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfutils.py", line 32, in makeA85Image
+    img = ImageReader(filename)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 649, in __init__
+    self._image = self._read_image(self.fp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 666, in _read_image
+    return Image.open(fp)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\PIL\Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: 
+fileName=<_io.BufferedReader name='C:\\Users\\zheyu\\AppData\\Local\\Temp\\tmpqalni308.pdf'> identity=[ImageReader@0x14d7afc24e0] cannot identify image file <_io.BytesIO object at 0x0000014D7AFD4360>
+
+2025-06-13 11:56:10 - ERROR - 预览文件时出错（tmp2efxu9l4.pdf）：
+fileName=<_io.BufferedReader name='C:\\Users\\zheyu\\AppData\\Local\\Temp\\tmp2efxu9l4.pdf'> identity=[ImageReader@0x14d7afc2390] cannot identify image file <_io.BytesIO object at 0x0000014D7AFD4270>
+Traceback (most recent call last):
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 649, in __init__
+    self._image = self._read_image(self.fp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 666, in _read_image
+    return Image.open(fp)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\PIL\Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000014D7AFD4270>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 261, in update_preview
+    c.drawImage(file_path, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2084, in __init__
+    self.loadImageFromA85(src)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2092, in loadImageFromA85
+    imagedata = pdfutils.makeA85Image(source,IMG=IMG,detectJpeg=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfutils.py", line 32, in makeA85Image
+    img = ImageReader(filename)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 649, in __init__
+    self._image = self._read_image(self.fp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 666, in _read_image
+    return Image.open(fp)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\PIL\Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: 
+fileName=<_io.BufferedReader name='C:\\Users\\zheyu\\AppData\\Local\\Temp\\tmp2efxu9l4.pdf'> identity=[ImageReader@0x14d7afc2390] cannot identify image file <_io.BytesIO object at 0x0000014D7AFD4270>
+
+2025-06-13 11:56:11 - ERROR - 预览文件时出错（tmp8rtesi_6.pdf）：
+fileName=<_io.BufferedReader name='C:\\Users\\zheyu\\AppData\\Local\\Temp\\tmp8rtesi_6.pdf'> identity=[ImageReader@0x14d7afc2420] cannot identify image file <_io.BytesIO object at 0x0000014D004B48B0>
+Traceback (most recent call last):
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 649, in __init__
+    self._image = self._read_image(self.fp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 666, in _read_image
+    return Image.open(fp)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\PIL\Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000014D004B48B0>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 261, in update_preview
+    c.drawImage(file_path, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2084, in __init__
+    self.loadImageFromA85(src)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2092, in loadImageFromA85
+    imagedata = pdfutils.makeA85Image(source,IMG=IMG,detectJpeg=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfutils.py", line 32, in makeA85Image
+    img = ImageReader(filename)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 649, in __init__
+    self._image = self._read_image(self.fp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 666, in _read_image
+    return Image.open(fp)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\PIL\Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: 
+fileName=<_io.BufferedReader name='C:\\Users\\zheyu\\AppData\\Local\\Temp\\tmp8rtesi_6.pdf'> identity=[ImageReader@0x14d7afc2420] cannot identify image file <_io.BytesIO object at 0x0000014D004B48B0>
+
+2025-06-13 11:56:11 - ERROR - 预览文件时出错（tmplcmsfivp.pdf）：
+fileName=<_io.BufferedReader name='C:\\Users\\zheyu\\AppData\\Local\\Temp\\tmplcmsfivp.pdf'> identity=[ImageReader@0x14d7afc23f0] cannot identify image file <_io.BytesIO object at 0x0000014D004B49A0>
+Traceback (most recent call last):
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 649, in __init__
+    self._image = self._read_image(self.fp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 666, in _read_image
+    return Image.open(fp)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\PIL\Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000014D004B49A0>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 261, in update_preview
+    c.drawImage(file_path, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2084, in __init__
+    self.loadImageFromA85(src)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2092, in loadImageFromA85
+    imagedata = pdfutils.makeA85Image(source,IMG=IMG,detectJpeg=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfutils.py", line 32, in makeA85Image
+    img = ImageReader(filename)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 649, in __init__
+    self._image = self._read_image(self.fp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\lib\utils.py", line 666, in _read_image
+    return Image.open(fp)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\PIL\Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: 
+fileName=<_io.BufferedReader name='C:\\Users\\zheyu\\AppData\\Local\\Temp\\tmplcmsfivp.pdf'> identity=[ImageReader@0x14d7afc23f0] cannot identify image file <_io.BytesIO object at 0x0000014D004B49A0>
+
+2025-06-13 11:57:17 - ERROR - 预览文件时出错（tmpsnecytr7.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 264, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:57:18 - ERROR - 预览文件时出错（tmp8dumkqwj.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 264, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:57:19 - ERROR - 预览文件时出错（tmp2vfn5vvb.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 264, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:57:20 - ERROR - 预览文件时出错（tmp0s8p3ax8.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 264, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:58:01 - ERROR - 预览文件时出错（tmp260lnquy.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 265, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:58:02 - ERROR - 预览文件时出错（tmpgmcgfqgi.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 265, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:58:03 - ERROR - 预览文件时出错（tmprp0q06y8.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 265, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:58:03 - ERROR - 预览文件时出错（tmpwubxzkmv.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 265, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:31 - ERROR - 预览文件时出错（tmpvw42alw9.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 270, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:32 - ERROR - 预览文件时出错（tmpujkpld5f.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 270, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:33 - ERROR - 预览文件时出错（tmpbno4g8bq.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 270, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:34 - ERROR - 预览文件时出错（tmplwn24tce.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 270, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:39 - ERROR - 预览文件时出错（tmpve2xuu40.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 270, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:40 - ERROR - 预览文件时出错（tmpw9k2mkpc.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 270, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:40 - ERROR - 预览文件时出错（tmp4c4wubfu.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 270, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:41 - ERROR - 预览文件时出错（tmp3n1a0092.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 270, in update_preview
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:46 - ERROR - 处理文件时出错（tmp0a2m83gq.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 418, in merge_files
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:48 - ERROR - 处理文件时出错（tmpfu69f46l.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 418, in merge_files
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:48 - ERROR - 处理文件时出错（tmp9zrcl3yz.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 418, in merge_files
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
+2025-06-13 11:59:49 - ERROR - 处理文件时出错（tmps9757sif.pdf）：expected str, bytes or os.PathLike object, not BytesIO
+Traceback (most recent call last):
+  File "j:\python_demo\pdf_merger.py", line 418, in merge_files
+    c.drawImage(img_stream, 0, 0, width=pdf_width, height=pdf_height)
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfgen\canvas.py", line 990, in drawImage
+    imgObj = pdfdoc.PDFImageXObject(name, image, mask=mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zheyu\AppData\Roaming\Python\Python312\site-packages\reportlab\pdfbase\pdfdoc.py", line 2079, in __init__
+    ext = os.path.splitext(source)[1].lower()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 258, in splitext
+TypeError: expected str, bytes or os.PathLike object, not BytesIO
+
