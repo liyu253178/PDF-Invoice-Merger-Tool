@@ -4,7 +4,7 @@
 
 这是一个基于 PyQt5 开发的桌面应用程序，旨在帮助用户方便快捷地合并发票 PDF 文件和图像文件（如 JPG、PNG）。它支持将多个发票 PDF 文件合并为一个，或将发票图像文件转换为 PDF 并与其他发票 PDF 文件合并。该工具提供了直观的用户界面，并支持在合并过程中实时显示进度。
 
-![Uploading a2e6f46128c601280bcf58877cd3ffe.png…]()
+https://raw.githubusercontent.com/liyu253178/PDF-Invoice-Merger-Tool/refs/heads/main/a2e6f46128c601280bcf58877cd3ffe.png
 
 
 ## 主要功能
